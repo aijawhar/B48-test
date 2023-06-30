@@ -22,3 +22,23 @@ request.onload=function(){
                        console.log(result[i].flag);
 }
 }
+
+//Compare two JSON have same properties without order
+let obj1 = {name:"Person1", age:25};
+let obj2 = {age:25, name:"Person1"};
+let flag = true;
+if(Object.keys(obj1).length==Object.keys(obj2).length){
+    for(key in obj1){
+        if(obj1[key] ==obj2[key]){
+            continue;
+        }
+        else{
+            flag=false;
+            break;
+        }
+    }
+}
+    else{
+        flag = false;
+    }
+console.log(`is object equal : ${flag}`);
