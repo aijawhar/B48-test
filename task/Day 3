@@ -1,1 +1,27 @@
+let resume = {
+    name: 'Jawhar',
+    age: 39,
+    dob: 25/0/1993,
+    qualification: 'BBA',
+    phone: 9000000000,
+    address:'Chennai',
+    pincode: 600000,
+    skills: ['JS', 'Testing'],
+    experience: 'Fifteen years',
+    current_company: 'ABC',
+    last_company:'CBA',
+    profession: 'Software tester',
+    marital_status: 'Married',
+    languages_known: 'English and Tamil'
+};
+// 
+let json=JSON.stringify(resume);
+let jsonObject = JSON.parse(json);
+// console.log(jsonObject);
+for (let key in jsonObject){
+    console.log(key, jsonObject[key]);
+}
 
+// for(let key of Object.keys(jsonObject)){
+//     console.log(key, jsonObject[key]);
+// }
